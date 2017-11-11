@@ -1,0 +1,9 @@
+C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\WladZamien\bin\Debug\WladZamien.exe.config
+C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\WladZamien\bin\Debug\WladZamien.exe
+C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\WladZamien\bin\Debug\WladZamien.pdb
+C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\WladZamien\bin\Debug\KCDReader.dll
+C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\WladZamien\bin\Debug\KCDReader.pdb
+C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\WladZamien\obj\Debug\WladZamien.csprojResolveAssemblyReference.cache
+C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\WladZamien\obj\Debug\WladZamien.csproj.CoreCompileInputs.cache
+C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\WladZamien\obj\Debug\WladZamien.exe
+C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\WladZamien\obj\Debug\WladZamien.pdb
