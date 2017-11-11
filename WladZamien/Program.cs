@@ -1,23 +1,24 @@
-﻿using KCDReader;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using KCDReader;
 
 namespace WladZamien
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            KcdObj kcd = new KcdObj(args[0]);
+            var kcd = new KcdObj(args[0]);
 
             kcd.LoadKcd();
 
-           
+            List<MzObiekty> obiekty = kcd.GetObjectsMz();
 
-            
+            foreach (var obiekt in obiekty)
+            {
+                Console.WriteLine(obiekt.NrWarstwy);
+            }
+
         }
     }
 }

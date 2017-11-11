@@ -1,19 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace KCDReader
 {
     public class KcdObj
     {
-        private string _fileName;
+        public string FileName { get; set; }
 
-        public string FileName { get => _fileName; set => _fileName = value; }
-
-        List<MZ_Obiekty> mzObiekty = new List<MZ_Obiekty>();
+        readonly List<MzObiekty> _mzObiekty = new List<MzObiekty>();
 
         public KcdObj(string fileName)
         {
@@ -22,12 +17,41 @@ namespace KCDReader
 
         public void LoadKcd()
         {
-            StreamReader fileKcd = new StreamReader(_fileName);
+            try
+            {
+                using (StreamReader kcdFile = new StreamReader(FileName))
+                {
+                    string lineKcd;
+                    long lineNumber = 0;
+
+                    while ((lineKcd = kcdFile.ReadLine()) != null)
+                    {
+                        lineNumber++;
+
+                        if (lineKcd.StartsWith(":"))
+                        {
+                            MzObiekty obiekt = new MzObiekty();
+
+                            obiekt.NrWarstwy = lineKcd.Substring(1);
+                            obiekt.NrWarstwyLine = lineNumber;
+
+                            _mzObiekty.Add(obiekt);
+
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
         }
 
-        public List<MZ_Obiekty> GetObjectsMz()
+        public List<MzObiekty> GetObjectsMz()
         {
-            return mzObiekty;
+            return _mzObiekty;
         }
         
     }

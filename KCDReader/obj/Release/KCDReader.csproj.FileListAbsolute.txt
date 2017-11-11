@@ -1,6 +1,0 @@
-C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\KCDReader\bin\Release\KCDReader.dll
-C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\KCDReader\bin\Release\KCDReader.pdb
-C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\KCDReader\obj\Release\KCDReader.csproj.CoreCompileInputs.cache
-C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\KCDReader\obj\Release\KCDReader.dll
-C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\KCDReader\obj\Release\KCDReader.pdb
-C:\Users\grzeg\OneDrive\Documents\Visual Studio 2017\Projects\EWID_Tools\KCDReader\obj\Release\KCDReader.csprojResolveAssemblyReference.cache
