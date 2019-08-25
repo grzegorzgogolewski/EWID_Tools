@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A09BA6B4-F3E0-4356-B0D3-6693DA958043}</ProjectGuid>
+    <ProjectGuid>{F2514801-52C5-4782-BA9D-D4A48F6D630C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WladZamien</RootNamespace>
-    <AssemblyName>WladZamien</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>RozbijObiekty</RootNamespace>
+    <AssemblyName>RozbijObiekty</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,11 +49,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KCDReader\KCDReaderLib.csproj">
-      <Project>{232f78e0-af8c-411a-ae0c-061737d46deb}</Project>
-      <Name>KCDReaderLib</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <Import Project="..\KCDReaderLib\KCDReaderLib.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

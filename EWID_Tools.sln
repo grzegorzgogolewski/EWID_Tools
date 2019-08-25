@@ -1,15 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EksportDzeGML", "EksportDzeGML\EksportDzeGML.csproj", "{0DA580F3-173A-4587-A55A-4D99AD983947}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KCDReader", "KCDReader\KCDReader.csproj", "{232F78E0-AF8C-411A-AE0C-061737D46DEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtworzOpis", "UtworzOpis\UtworzOpis.csproj", "{9E1A7E49-9F69-4022-B936-853145B4C803}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WladZamien", "WladZamien\WladZamien.csproj", "{A09BA6B4-F3E0-4356-B0D3-6693DA958043}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RozbijObiekty", "RozbijObiekty\RozbijObiekty.csproj", "{F2514801-52C5-4782-BA9D-D4A48F6D630C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "KCDReader", "KCDReaderLib\KCDReader.shproj", "{79FF8430-FB31-4CA5-A27E-98B37BA3D590}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EksportPikietKCD", "EksportPikietKCD\EksportPikietKCD.csproj", "{22C126A8-41A4-4570-8E6D-E24AED958C9C}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		KCDReaderLib\KCDReaderLib.projitems*{22c126a8-41a4-4570-8e6d-e24aed958c9c}*SharedItemsImports = 4
+		KCDReaderLib\KCDReaderLib.projitems*{79ff8430-fb31-4ca5-a27e-98b37ba3d590}*SharedItemsImports = 13
+		KCDReaderLib\KCDReaderLib.projitems*{f2514801-52c5-4782-ba9d-d4a48f6d630c}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -19,14 +28,18 @@ Global
 		{0DA580F3-173A-4587-A55A-4D99AD983947}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DA580F3-173A-4587-A55A-4D99AD983947}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DA580F3-173A-4587-A55A-4D99AD983947}.Release|Any CPU.Build.0 = Release|Any CPU
-		{232F78E0-AF8C-411A-AE0C-061737D46DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{232F78E0-AF8C-411A-AE0C-061737D46DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{232F78E0-AF8C-411A-AE0C-061737D46DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{232F78E0-AF8C-411A-AE0C-061737D46DEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A09BA6B4-F3E0-4356-B0D3-6693DA958043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A09BA6B4-F3E0-4356-B0D3-6693DA958043}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A09BA6B4-F3E0-4356-B0D3-6693DA958043}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A09BA6B4-F3E0-4356-B0D3-6693DA958043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E1A7E49-9F69-4022-B936-853145B4C803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E1A7E49-9F69-4022-B936-853145B4C803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E1A7E49-9F69-4022-B936-853145B4C803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E1A7E49-9F69-4022-B936-853145B4C803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2514801-52C5-4782-BA9D-D4A48F6D630C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2514801-52C5-4782-BA9D-D4A48F6D630C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2514801-52C5-4782-BA9D-D4A48F6D630C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2514801-52C5-4782-BA9D-D4A48F6D630C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C126A8-41A4-4570-8E6D-E24AED958C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C126A8-41A4-4570-8E6D-E24AED958C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C126A8-41A4-4570-8E6D-E24AED958C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C126A8-41A4-4570-8E6D-E24AED958C9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

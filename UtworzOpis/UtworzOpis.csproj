@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A09BA6B4-F3E0-4356-B0D3-6693DA958043}</ProjectGuid>
+    <ProjectGuid>{9E1A7E49-9F69-4022-B936-853145B4C803}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WladZamien</RootNamespace>
-    <AssemblyName>WladZamien</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>UtworzOpis</RootNamespace>
+    <AssemblyName>UtworzOpis</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KCDReader\KCDReaderLib.csproj">
-      <Project>{232f78e0-af8c-411a-ae0c-061737d46deb}</Project>
-      <Name>KCDReaderLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
