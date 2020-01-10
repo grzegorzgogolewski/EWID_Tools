@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Text;
 using KCDReader;
@@ -9,9 +10,32 @@ namespace RozbijObiekty
     {
         private static void Main(string[] args)
         {
-            string fileName = args[0];
+            string inFileName = args[0];
 
-            KcdReader kcdReader = new KcdReader(fileName);
+            // USUNIĘCIE DUBLI PUNKTOW NA WEJSCIU
+
+            string outFileName = Path.Combine(Path.GetDirectoryName(inFileName) ?? throw new InvalidOperationException(), Path.GetFileNameWithoutExtension(inFileName) + ".tmp");
+
+            using (StreamReader sr = new StreamReader(inFileName, Encoding.GetEncoding(1250)))
+            using (StreamWriter sw = new StreamWriter(outFileName, false, Encoding.GetEncoding(1250)))
+            {
+                string linePop = "";
+
+                while (sr.Peek() >= 0)
+                {
+                    string line = sr.ReadLine();
+
+                    if (line != linePop)
+                    {
+                        linePop = line;
+                        sw.WriteLine(line);    
+                    }
+                }
+            }
+
+            inFileName = outFileName;
+
+            KcdReader kcdReader = new KcdReader(inFileName);
             kcdReader.LoadKcd();
 
             int featureCount = 0;
@@ -19,8 +43,8 @@ namespace RozbijObiekty
             using (StreamWriter sw =
                 new StreamWriter(
                     new FileStream(
-                        Path.Combine(Path.GetDirectoryName(fileName) ?? throw new InvalidOperationException(), 
-                            Path.GetFileNameWithoutExtension(fileName) + "_[err].kcd"), FileMode.Create), 
+                        Path.Combine(Path.GetDirectoryName(inFileName) ?? throw new InvalidOperationException(), 
+                            Path.GetFileNameWithoutExtension(inFileName) + "_[err].kcd"), FileMode.Create), 
                     Encoding.GetEncoding(1250)))
             {
                 foreach (KcdFeature kcdFeature in kcdReader.GetKcdFeatures())
@@ -67,8 +91,8 @@ namespace RozbijObiekty
 
             using (StreamWriter sw = new StreamWriter(
                 new FileStream(
-                    Path.Combine(Path.GetDirectoryName(fileName) ?? throw new InvalidOperationException(),
-                        Path.GetFileNameWithoutExtension(fileName) + "_[poprawne].kcd"), FileMode.Create),
+                    Path.Combine(Path.GetDirectoryName(inFileName) ?? throw new InvalidOperationException(),
+                        Path.GetFileNameWithoutExtension(inFileName) + "_[poprawne].kcd"), FileMode.Create),
                 Encoding.GetEncoding(1250)))
             {
                 foreach (KcdFeature kcdFeature in kcdReader.GetKcdFeatures())
@@ -115,8 +139,8 @@ namespace RozbijObiekty
 
             using (StreamWriter sw = new StreamWriter(
                 new FileStream(
-                    Path.Combine(Path.GetDirectoryName(fileName) ?? throw new InvalidOperationException(),
-                        Path.GetFileNameWithoutExtension(fileName) + "_[duble].kcd"), FileMode.Create),
+                    Path.Combine(Path.GetDirectoryName(inFileName) ?? throw new InvalidOperationException(),
+                        Path.GetFileNameWithoutExtension(inFileName) + "_[duble].kcd"), FileMode.Create),
                 Encoding.GetEncoding(1250)))
             {
                 foreach (KcdFeature kcdFeature in kcdReader.GetKcdFeatures())

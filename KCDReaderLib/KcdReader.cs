@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -53,6 +54,10 @@ namespace KCDReader
                                 kcdFeature.AtrC = kcdLine;
                                 break;
 
+                            case "g":
+                                kcdFeature.AtrG = kcdLine;
+                                break;
+
                             case "m":
                                 kcdFeature.AtrM = kcdLine;
                                 break;
@@ -73,6 +78,10 @@ namespace KCDReader
                                 kcdFeature.AtrP.Add(kcdLine);
                                 break;
 
+                            case "w":
+                                kcdFeature.AtrW.Add(kcdLine);
+                                break;
+
                             case "o":
                                 kcdFeature.AtrO = kcdLine;
                                 break;
@@ -84,10 +93,31 @@ namespace KCDReader
 
                                 switch (atr)
                                 {
+                                    case "a1":
+                                        kcdFeature.Atr1 = kcdLine;
+                                        break;
+                                    case "a2":
+                                        kcdFeature.Atr2 = kcdLine;
+                                        break;
+                                    case "a3":
+                                        kcdFeature.Atr3 = kcdLine;
+                                        break;
+                                    case "a4":
+                                        kcdFeature.Atr4 = kcdLine;
+                                        break;
                                     case "a6":
                                         kcdFeature.Atr6 = kcdLine;
                                         break;
 
+                                    case "a7":
+                                        kcdFeature.Atr7 = kcdLine;
+                                        break;
+                                    case "a8":
+                                        kcdFeature.Atr8 = kcdLine;
+                                        break;
+                                    case "a11":
+                                        kcdFeature.Atr11 = kcdLine;
+                                        break;
                                     case "a15":
                                         kcdFeature.Atr15 = kcdLine;
                                         break;
@@ -102,6 +132,15 @@ namespace KCDReader
 
                                     case "a18":
                                         kcdFeature.Atr18 = kcdLine;
+                                        break;
+                                    case "a19":
+                                        kcdFeature.Atr19 = kcdLine;
+                                        break;
+                                    case "a40":
+                                        kcdFeature.Atr40 = kcdLine;
+                                        break;
+                                    case "a41":
+                                        kcdFeature.Atr41 = kcdLine;
                                         break;
 
                                     case "a73":
@@ -124,27 +163,78 @@ namespace KCDReader
                                         kcdFeature.Atr79 = kcdLine;
                                         break;
 
+                                    case "a81":
+                                        kcdFeature.Atr81 = kcdLine;
+                                        break;
+
+                                    case "a84":
+                                        kcdFeature.Atr84 = kcdLine;
+                                        break;
+
+                                    case "a86":
+                                        kcdFeature.Atr86 = kcdLine;
+                                        break;
+                                    case "a87":
+                                        kcdFeature.Atr87 = kcdLine;
+                                        break;
+                                    case "a88":
+                                        kcdFeature.Atr88 = kcdLine;
+                                        break;
+                                    case "a89":
+                                        kcdFeature.Atr89 = kcdLine;
+                                        break;
+                                    case "a91":
+                                        kcdFeature.Atr91 = kcdLine;
+                                        break;
+                                    case "a92":
+                                        kcdFeature.Atr92 = kcdLine;
+                                        break;
+
+                                    case "a93":
+                                        kcdFeature.Atr93 = kcdLine;
+                                        break;
+
                                     case "a94":
                                         kcdFeature.Atr94 = kcdLine;
                                         break;
+                                    case "a103":
+                                        kcdFeature.Atr103 = kcdLine;
+                                        break;
+                                    case "a109":
+                                        kcdFeature.Atr109 = kcdLine;
+                                        break;
+                                    case "a110":
+                                        kcdFeature.Atr110 = kcdLine;
+                                        break;
+                                    case "a113":
+                                        kcdFeature.Atr113 = kcdLine;
+                                        break;
 
+                                    case "a255":
+                                        kcdFeature.Atr255 = kcdLine;
+                                        break;
                                     case "a333":
                                         kcdFeature.Atr333 = kcdLine;
                                         break;
+                                    case "a990":
+                                        kcdFeature.Atr990 = kcdLine;
+                                        break;
+                                    case "a991":
+                                        kcdFeature.Atr991 = kcdLine;
+                                        break;
+                                    case "a995":
+                                        kcdFeature.Atr995 = kcdLine;
+                                        break;
 
                                     default:
-                                        //Console.WriteLine($"Nierozpoznany typ atrybutu: {atr}");
+                                        Console.WriteLine($"Nierozpoznany typ atrybutu: {atr}");
                                         break;
                                 }
 
                                 break;
 
-                            case "w":
-                                kcdFeature.AtrW = kcdLine;
-                                break;
-
                             default:
-                                //Console.WriteLine($"Nierozpoznany typ rodzaju atrybutu: {kcdLine.Substring(0, 1)}");
+                                Console.WriteLine($"Nierozpoznany typ rodzaju atrybutu: {kcdLine.Substring(0, 1)}");
                                 break;
                         }
                     }
@@ -155,6 +245,11 @@ namespace KCDReader
         public List<KcdFeature> GetKcdFeatures()
         {
             return _kcdFeaturesList;
+        }
+
+        public List<String> GetHeader()
+        {
+            return _kcdHeader;
         }
 
         public int KcdFeaturesCount()

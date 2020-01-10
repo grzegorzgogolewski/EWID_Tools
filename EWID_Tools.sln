@@ -13,8 +13,13 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "KCDReader", "KCDReaderLib\K
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EksportPikietKCD", "EksportPikietKCD\EksportPikietKCD.csproj", "{22C126A8-41A4-4570-8E6D-E24AED958C9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DodajDatyPomiaru", "DodajDatyPomiaru\DodajDatyPomiaru.csproj", "{1C0353BD-74EA-4C47-B9B1-0A4E570F5145}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsunGrupeObiektow", "UsunGrupeObiektow\UsunGrupeObiektow.csproj", "{CF158ED2-F918-4695-8CA2-5F658B41931A}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		KCDReaderLib\KCDReaderLib.projitems*{1c0353bd-74ea-4c47-b9b1-0a4e570f5145}*SharedItemsImports = 4
 		KCDReaderLib\KCDReaderLib.projitems*{22c126a8-41a4-4570-8e6d-e24aed958c9c}*SharedItemsImports = 4
 		KCDReaderLib\KCDReaderLib.projitems*{79ff8430-fb31-4ca5-a27e-98b37ba3d590}*SharedItemsImports = 13
 		KCDReaderLib\KCDReaderLib.projitems*{f2514801-52c5-4782-ba9d-d4a48f6d630c}*SharedItemsImports = 4
@@ -40,6 +45,14 @@ Global
 		{22C126A8-41A4-4570-8E6D-E24AED958C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22C126A8-41A4-4570-8E6D-E24AED958C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22C126A8-41A4-4570-8E6D-E24AED958C9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C0353BD-74EA-4C47-B9B1-0A4E570F5145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0353BD-74EA-4C47-B9B1-0A4E570F5145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0353BD-74EA-4C47-B9B1-0A4E570F5145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0353BD-74EA-4C47-B9B1-0A4E570F5145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF158ED2-F918-4695-8CA2-5F658B41931A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF158ED2-F918-4695-8CA2-5F658B41931A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF158ED2-F918-4695-8CA2-5F658B41931A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF158ED2-F918-4695-8CA2-5F658B41931A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
